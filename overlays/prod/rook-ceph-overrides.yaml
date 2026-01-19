@@ -1,0 +1,40 @@
+apiVersion: ceph.rook.io/v1
+kind: CephCluster
+metadata:
+  name: rook-ceph
+spec:
+  cephVersion:
+    image: quay.io/ceph/ceph:v17
+  dataDirHostPath: /var/lib/rook
+  mon:
+    count: 3
+    allowMultiplePerNode: false
+  mgr:
+    count: 2
+
+  network:
+    provider: host
+    public:
+      network: 10.8.132.160/27   # VLAN 3409 - Ceph Public
+    cluster:
+      network: 10.8.132.128/27   # VLAN 3408 - Ceph Cluster
+
+  storage:
+    useAllNodes: false
+    nodes:
+      - name: worker-comp-ceph-01
+        devices:
+          - name: pci-0000:65:00.0-scsi-0:3:102:0
+          - name: pci-0000:65:00.0-scsi-0:3:103:0
+      - name: worker-comp-ceph-02
+        devices:
+          - name: pci-0000:18:00.0-scsi-0:2:10:0
+          - name: pci-0000:18:00.0-scsi-0:2:11:0
+      - name: worker-comp-ceph-03
+        devices:
+          - name: pci-0000:65:00.0-scsi-0:3:106:0
+          - name: pci-0000:65:00.0-scsi-0:3:107:0
+
+  crashCollector:
+    disable: false
+
