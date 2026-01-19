@@ -8,22 +8,22 @@ spec:
     image: quay.io/ceph/ceph:v18.2.7
   dataDirHostPath: /var/lib/rook
 
-mon:
-  count: 3
-  allowMultiplePerNode: false
-  placement:
-    mon:
+  mon:
+    count: 3
+    allowMultiplePerNode: false
+    placement:
       nodeAffinity:
         requiredDuringSchedulingIgnoredDuringExecution:
           nodeSelectorTerms:
-          - matchExpressions:
-            - key: kubernetes.io/hostname
-              operator: In
-              values:
-              - worker-comp-ceph-01
-              - worker-comp-ceph-02
-              - worker-comp-ceph-03
-
+            - matchExpressions:
+                - key: role
+                  operator: In
+                  values:
+                    - storage-node
+      tolerations:
+        - key: "node-role.kubernetes.io/control-plane"
+          operator: "Exists"
+          effect: "NoSchedule"
 
   mgr:
     count: 2
