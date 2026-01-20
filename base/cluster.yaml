@@ -12,6 +12,9 @@ spec:
     allowMultiplePerNode: false
   mgr:
     count: 2
+  dashboard:
+    enabled: true
+    ssl: true
   network:
     provider: host
     public:
