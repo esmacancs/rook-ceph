@@ -26,8 +26,8 @@ spec:
           - name: "/dev/disk/by-path/pci-0000:18:00.0-scsi-0:2:16:0"  
       - name: worker-comp-ceph-03
         devices:
-          - name: "/dev/disk/by-path/pci-0000:65:00.0-scsi-0:3:105:0"
           - name: "/dev/disk/by-path/pci-0000:65:00.0-scsi-0:3:106:0"
           - name: "/dev/disk/by-path/pci-0000:65:00.0-scsi-0:3:108:0"
           - name: "/dev/disk/by-path/pci-0000:65:00.0-scsi-0:3:109:0"
           - name: "/dev/disk/by-path/pci-0000:65:00.0-scsi-0:3:110:0"
+          - name: "/dev/disk/by-path/pci-0000:65:00.0-scsi-0:3:111:0"
