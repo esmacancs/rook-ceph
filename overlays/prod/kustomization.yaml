@@ -1,6 +1,11 @@
+# overlays/prod/kustomization.yaml
 namespace: rook-ceph
 resources:
   - ../../base
 
-patchesStrategicMerge:
-  - rook-ceph-overrides.yaml
+patches:
+  - path: rook-ceph-overrides.yaml
+    target:
+      kind: CephCluster
+      name: rook-ceph
+      namespace: rook-ceph
