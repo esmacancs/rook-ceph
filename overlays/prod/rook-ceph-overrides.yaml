@@ -10,24 +10,22 @@ spec:
     nodes:
       - name: worker-comp-ceph-01
         devices:
-          - name: "/dev/disk/by-path/pci-0000:65:00.0-scsi-0:3:105:0"
-          - name: "/dev/disk/by-path/pci-0000:65:00.0-scsi-0:3:106:0"
-          - name: "/dev/disk/by-path/pci-0000:65:00.0-scsi-0:3:108:0"
-          - name: "/dev/disk/by-path/pci-0000:65:00.0-scsi-0:3:109:0"
-          - name: "/dev/disk/by-path/pci-0000:65:00.0-scsi-0:3:110:0"
-          - name: "/dev/disk/by-path/pci-0000:65:00.0-scsi-0:3:111:0"
+          - name: "/dev/disk/by-path/pci-0000:65:00.0-scsi-0:3:102:0"  # sdb
+          - name: "/dev/disk/by-path/pci-0000:65:00.0-scsi-0:3:104:0"  # sdc
+          - name: "/dev/disk/by-path/pci-0000:65:00.0-scsi-0:3:106:0"  # sde
+          - name: "/dev/disk/by-path/pci-0000:65:00.0-scsi-0:3:103:0"  # sdf
+          - name: "/dev/disk/by-path/pci-0000:65:00.0-scsi-0:3:109:0"  # sdh
+          - name: "/dev/disk/by-path/pci-0000:65:00.0-scsi-0:3:110:0"  # sdi
       - name: worker-comp-ceph-02
         devices:
-          - name: "/dev/disk/by-path/pci-0000:18:00.0-scsi-0:2:11:0"
-          - name: "/dev/disk/by-path/pci-0000:18:00.0-scsi-0:2:12:0"
-          - name: "/dev/disk/by-path/pci-0000:18:00.0-scsi-0:2:13:0"
-          - name: "/dev/disk/by-path/pci-0000:18:00.0-scsi-0:2:14:0"
-          - name: "/dev/disk/by-path/pci-0000:18:00.0-scsi-0:2:15:0"
-          - name: "/dev/disk/by-path/pci-0000:18:00.0-scsi-0:2:16:0"  
+          - name: "/dev/disk/by-path/pci-0000:18:00.0-scsi-0:2:11:0"   # sdl
+          - name: "/dev/disk/by-path/pci-0000:18:00.0-scsi-0:2:12:0"   # sdm
+          - name: "/dev/disk/by-path/pci-0000:18:00.0-scsi-0:2:13:0"   # sdn
+          - name: "/dev/disk/by-path/pci-0000:18:00.0-scsi-0:2:14:0"   # sdo
+          - name: "/dev/disk/by-path/pci-0000:18:00.0-scsi-0:2:15:0"   # sdq
+          - name: "/dev/disk/by-path/pci-0000:18:00.0-scsi-0:2:16:0"   # sdp
       - name: worker-comp-ceph-03
         devices:
-          - name: "/dev/disk/by-path/pci-0000:65:00.0-scsi-0:3:106:0"
-          - name: "/dev/disk/by-path/pci-0000:65:00.0-scsi-0:3:108:0"
-          - name: "/dev/disk/by-path/pci-0000:65:00.0-scsi-0:3:109:0"
-          - name: "/dev/disk/by-path/pci-0000:65:00.0-scsi-0:3:110:0"
-          - name: "/dev/disk/by-path/pci-0000:65:00.0-scsi-0:3:111:0"
+          - name: "/dev/disk/by-path/pci-0000:65:00.0-scsi-0:3:104:0"  # sda
+          - name: "/dev/disk/by-path/pci-0000:65:00.0-scsi-0:3:107:0"  # sdd
+          - name: "/dev/disk/by-path/pci-0000:65:00.0-scsi-0:3:103:0"  # sdh
