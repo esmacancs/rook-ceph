@@ -2,31 +2,32 @@ apiVersion: ceph.rook.io/v1
 kind: CephCluster
 metadata:
   name: rook-ceph
+  namespace: rook-ceph
 spec:
   storage:
     useAllNodes: false
+    useAllDevices: false
     nodes:
       - name: worker-comp-ceph-01
         devices:
-          - name: "pci-0000:65:00.0-scsi-0:3:105:0"
-          - name: "pci-0000:65:00.0-scsi-0:3:106:0"
-          - name: "pci-0000:65:00.0-scsi-0:3:108:0"
-          - name: "pci-0000:65:00.0-scsi-0:3:109:0"
-          - name: "pci-0000:65:00.0-scsi-0:3:110:0"
-          - name: "pci-0000:65:00.0-scsi-0:3:111:0"
+          - name: "/dev/disk/by-path/pci-0000:65:00.0-scsi-0:3:105:0"
+          - name: "/dev/disk/by-path/pci-0000:65:00.0-scsi-0:3:106:0"
+          - name: "/dev/disk/by-path/pci-0000:65:00.0-scsi-0:3:108:0"
+          - name: "/dev/disk/by-path/pci-0000:65:00.0-scsi-0:3:109:0"
+          - name: "/dev/disk/by-path/pci-0000:65:00.0-scsi-0:3:110:0"
+          - name: "/dev/disk/by-path/pci-0000:65:00.0-scsi-0:3:111:0"
       - name: worker-comp-ceph-02
         devices:
-          - name: "pci-0000:18:00.0-scsi-0:2:11:0"
-          - name: "pci-0000:18:00.0-scsi-0:2:12:0"
-          - name: "pci-0000:18:00.0-scsi-0:2:13:0"
-          - name: "pci-0000:18:00.0-scsi-0:2:14:0"
-          - name: "pci-0000:18:00.0-scsi-0:2:15:0"
-          - name: "pci-0000:18:00.0-scsi-0:2:16:0"
+          - name: "/dev/disk/by-path/pci-0000:18:00.0-scsi-0:2:11:0"
+          - name: "/dev/disk/by-path/pci-0000:18:00.0-scsi-0:2:12:0"
+          - name: "/dev/disk/by-path/pci-0000:18:00.0-scsi-0:2:13:0"
+          - name: "/dev/disk/by-path/pci-0000:18:00.0-scsi-0:2:14:0"
+          - name: "/dev/disk/by-path/pci-0000:18:00.0-scsi-0:2:15:0"
+          - name: "/dev/disk/by-path/pci-0000:18:00.0-scsi-0:2:16:0"  
       - name: worker-comp-ceph-03
         devices:
-          - name: "pci-0000:65:00.0-scsi-0:3:106:0"
-          - name: "pci-0000:65:00.0-scsi-0:3:107:0"
-          - name: "pci-0000:65:00.0-scsi-0:3:108:0"
-          - name: "pci-0000:65:00.0-scsi-0:3:109:0"
-          - name: "pci-0000:65:00.0-scsi-0:3:110:0"
-          - name: "pci-0000:65:00.0-scsi-0:3:111:0"
+          - name: "/dev/disk/by-path/pci-0000:65:00.0-scsi-0:3:105:0"
+          - name: "/dev/disk/by-path/pci-0000:65:00.0-scsi-0:3:106:0"
+          - name: "/dev/disk/by-path/pci-0000:65:00.0-scsi-0:3:108:0"
+          - name: "/dev/disk/by-path/pci-0000:65:00.0-scsi-0:3:109:0"
+          - name: "/dev/disk/by-path/pci-0000:65:00.0-scsi-0:3:110:0"

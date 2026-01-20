@@ -18,8 +18,8 @@ spec:
       network: 10.8.132.160/27   # Ceph Public VLAN
     cluster:
       network: 10.8.132.128/27   # Ceph Cluster VLAN
-  storage:
-    useAllNodes: false
-    nodes: []  # overridden in overlays/prod/rook-ceph-overrides.yaml
+#  storage:
+#    useAllNodes: false
+#    nodes: []  # overridden in overlays/prod/rook-ceph-overrides.yaml
   crashCollector:
     disable: false
