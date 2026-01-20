@@ -22,10 +22,8 @@ spec:
           - name: "/dev/disk/by-path/pci-0000:18:00.0-scsi-0:2:2:0"    # sdc
           - name: "/dev/disk/by-path/pci-0000:18:00.0-scsi-0:2:3:0"    # sdd
           - name: "/dev/disk/by-path/pci-0000:18:00.0-scsi-0:2:4:0"    # sde
-          - name: "/dev/disk/by-path/pci-0000:18:00.0-scsi-0:2:5:0"    # sdk
           - name: "/dev/disk/by-path/pci-0000:18:00.0-scsi-0:2:6:0"    # sdf
+          - name: "/dev/disk/by-path/pci-0000:18:00.0-scsi-0:2:10:0"   # sdj
       - name: worker-comp-ceph-03
         devices:
-          - name: "/dev/disk/by-path/pci-0000:65:00.0-scsi-0:3:104:0"  # sda
           - name: "/dev/disk/by-path/pci-0000:65:00.0-scsi-0:3:107:0"  # sdd
-          - name: "/dev/disk/by-path/pci-0000:65:00.0-scsi-0:3:103:0"  # sdh
