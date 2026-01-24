@@ -48,7 +48,7 @@ spec:
     - name: nova-instances
       metadataPool:
         replicated:
-          size: 1
+          size: 3
       dataPools:
         - name: nova-instances-data0
           replicated:
