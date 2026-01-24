@@ -58,6 +58,4 @@ spec:
     activeCount: 1
     standbyCount: 1
     allowMultiplePerNode: false
-    activeCount: 1
-    allowMultiplePerNode: false
 
