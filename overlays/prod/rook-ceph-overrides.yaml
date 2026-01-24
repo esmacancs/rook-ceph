@@ -43,3 +43,19 @@ spec:
           - name: "/dev/disk/by-path/pci-0000:65:00.0-scsi-0:3:110:0"  # sdg
           - name: "/dev/disk/by-path/pci-0000:65:00.0-scsi-0:3:111:0"  # sdi
           - name: "/dev/disk/by-path/pci-0000:65:00.0-scsi-0:3:103:0"  # sdh
+
+  cephFS:
+    - name: nova-instances
+      metadataPool:
+        replicated:
+          size: 1
+      dataPools:
+        - name: nova-instances-data0
+          replicated:
+            size: 3
+      preservePoolsOnDelete: true
+
+  mds:
+    activeCount: 1
+    allowMultiplePerNode: false
+
