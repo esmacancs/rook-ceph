@@ -44,16 +44,26 @@ spec:
           - name: "/dev/disk/by-path/pci-0000:65:00.0-scsi-0:3:111:0"  # sdi
           - name: "/dev/disk/by-path/pci-0000:65:00.0-scsi-0:3:103:0"  # sdh
 
-  cephFS:
-    - name: nova-instances
-      metadataPool:
-        replicated:
-          size: 3
-      dataPools:
-        - name: nova-instances-data0
-          replicated:
-            size: 3
-      preservePoolsOnDelete: true
+---
+apiVersion: ceph.rook.io/v1
+kind: CephFilesystem
+metadata:
+  name: nova-instances
+  namespace: rook-ceph
+spec:
+  metadataPool:
+    replicated:
+      size: 3
+  dataPools:
+    - name: nova-instances-data0
+      replicated:
+        size: 3
+  metadataServer:
+    activeCount: 1
+    activeStandby: true
+    placement:
+      all: {}
+  preservePoolsOnDelete: true
   mds:
     activeCount: 1
     standbyCount: 1
