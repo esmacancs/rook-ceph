@@ -54,8 +54,10 @@ spec:
           replicated:
             size: 3
       preservePoolsOnDelete: true
-
   mds:
+    activeCount: 1
+    standbyCount: 1
+    allowMultiplePerNode: false
     activeCount: 1
     allowMultiplePerNode: false
 
