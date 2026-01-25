@@ -44,3 +44,6 @@ spec:
           - name: "/dev/disk/by-path/pci-0000:65:00.0-scsi-0:3:111:0"  # sdi
           - name: "/dev/disk/by-path/pci-0000:65:00.0-scsi-0:3:103:0"  # sdh
 
+  csi:
+    enableRbdDriver: true
+    enableCephfsDriver: true
